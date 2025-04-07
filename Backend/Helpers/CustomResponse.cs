@@ -1,12 +1,14 @@
 using System;
+using System.Text.Json;
+using Microsoft.AspNetCore.Mvc;
 
 namespace backend.Helpers;
 
 public class CustomResponse<T>
 {
-    public  T? Data;
-    public string Message ="OK";
-    public int ResponseStatus =200;
+    public  T? Data{ get; set; }
+    public string Message{ get; set; } ="OK";
+    public int ResponseStatus { get; set; }=200;
  
     public CustomResponse(T data,string message,int status)
     {
@@ -20,20 +22,19 @@ public class CustomResponse<T>
         Message=message;
         ResponseStatus=status;
 
-    }  
-    public IResult CreateResponse()
+    }
+    public IResult HandleResponse()
     {
         return ResponseStatus switch
         {
-            200 => Results.Ok(Data),
-            201 => Results.Created(Message, Data), // Requires a URI, use Results.Created(uri, data) if you have one
-            400 => Results.BadRequest(new { Message }),
+            200 => Results.Ok(this),
+            404 => Results.NotFound(this),
+            400 => Results.BadRequest(this),
             401 => Results.Unauthorized(),
             403 => Results.Forbid(),
-            404 => Results.NotFound(new { Message }),
-            409 =>Results.Conflict(Message),
-            500 => Results.StatusCode(500), // Use StatusCode for generic status codes
-            _ => Results.StatusCode(ResponseStatus), // Default to the set status code
+            409 => Results.Conflict(this),
+            500 => Results.InternalServerError(this),
+            _ => Results.StatusCode(500) // Default case
         };
     }
 }
