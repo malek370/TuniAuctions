@@ -19,6 +19,10 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
+<<<<<<< HEAD
 		SolutionGuid = {B3A5EDC5-4D90-45E5-A650-812E35F8A285}
+=======
+		SolutionGuid = {E5597456-1656-4D5B-A837-1E3EB1DAED08}
+>>>>>>> FirstAccountLogic
 	EndGlobalSection
 EndGlobal
