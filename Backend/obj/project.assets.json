@@ -80,11 +80,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mbokri\\OneDrive - Sopra Steria\\Desktop\\TuniAuction\\tuniauctions\\backend\\backend.csproj",
+      "projectUniqueName": "C:\\Users\\mbokri\\TuniAuction\\TuniAuctions\\Backend\\backend.csproj",
       "projectName": "backend",
-      "projectPath": "C:\\Users\\mbokri\\OneDrive - Sopra Steria\\Desktop\\TuniAuction\\tuniauctions\\backend\\backend.csproj",
+      "projectPath": "C:\\Users\\mbokri\\TuniAuction\\TuniAuctions\\Backend\\backend.csproj",
       "packagesPath": "C:\\Users\\mbokri\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mbokri\\OneDrive - Sopra Steria\\Desktop\\TuniAuction\\tuniauctions\\backend\\obj\\",
+      "outputPath": "C:\\Users\\mbokri\\TuniAuction\\TuniAuctions\\Backend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\mbokri\\AppData\\Roaming\\NuGet\\NuGet.Config",
