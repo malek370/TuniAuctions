@@ -7,5 +7,6 @@ namespace backend.Models;
         public static  string Seller {set;get;}= "Seller";
         public static string Buyer {set;get;}= "Buyer";
         public static string Member {set;get;}= "Member";
+        public static string Moderator {set;get;}="Moderator";
 
     }

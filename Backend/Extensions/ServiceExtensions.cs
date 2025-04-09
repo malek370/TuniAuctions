@@ -56,7 +56,8 @@ serviceColleection.AddIdentityCore<IdentityUser>()
     });
         serviceColleection.AddAuthorizationBuilder()
                 .AddPolicy(Policies.MemberRole, policy => policy.RequireRole(Roles.Member))
-                .AddPolicy(Policies.RequireBuyerRole, policy => policy.RequireRole(Roles.Buyer, Roles.Member));
+                .AddPolicy(Policies.RequireBuyerRole, policy => policy.RequireRole(Roles.Buyer))
+                .AddPolicy(Policies.RequireSellerRole, policy => policy.RequireRole(Roles.Seller));
     return serviceColleection;
     }
     

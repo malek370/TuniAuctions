@@ -10,7 +10,9 @@ var builder = WebApplication.CreateBuilder(args);
 //add services from extensions
 builder.Services.AddServices(builder.Configuration);
 var app = builder.Build();
-
+app.UseCors();
+app.UseAuthentication();
+app.UseAuthorization();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
