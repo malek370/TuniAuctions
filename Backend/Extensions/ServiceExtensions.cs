@@ -17,6 +17,7 @@ public static class ServiceExtensions
         // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 serviceColleection.AddOpenApi();
+serviceColleection.AddHttpContextAccessor();
 //serviceColleection.AddControllers();
 serviceColleection.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 serviceColleection.AddScoped<IAccountService,AccountService>();
