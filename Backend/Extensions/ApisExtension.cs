@@ -30,6 +30,7 @@ public static class ApisExtension
                 .ToArray();
             return forecast;
         })
+        
         .WithName("GetWeatherForecast");
         app.MapPost("/login", async (LoginReqDTO login, IAccountService accountService) =>
             {

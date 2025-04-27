@@ -1,10 +1,6 @@
 {
   "version": 2,
-<<<<<<< HEAD
-  "dgSpecHash": "RxijUMtyCSY=",
-=======
-  "dgSpecHash": "YEZhyYscWzc=",
->>>>>>> FirstAccountLogic
+  "dgSpecHash": "Bx8ZCETA7MA=",
   "success": true,
   "projectFilePath": "C:\\Users\\mbokri\\TuniAuction\\TuniAuctions\\Backend\\backend.csproj",
   "expectedPackageFiles": [

@@ -26,6 +26,7 @@ public class AccountService(UserManager<IdentityUser> _userManager,IMapper _mapp
     {
 
         if(UserExists(registerUserDTO))return new CustomResponse<LoginResultDTO>("Username or Email already exists",409);
+        if(registerUserDTO.ConfirmPassword!=registerUserDTO.Password)return new CustomResponse<LoginResultDTO>("Passwords do not match",400);
         IdentityUser user= _mapper.Map<IdentityUser>(registerUserDTO);
         var result=await _userManager.CreateAsync(user,registerUserDTO.Password);
         if(result.Succeeded)return await GenerateResWithToken(user);
