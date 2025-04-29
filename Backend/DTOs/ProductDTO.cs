@@ -1,12 +1,9 @@
 using System;
-using Microsoft.AspNetCore.Identity;
 
-namespace backend.Models;
+namespace backend.DTOs;
 
-public class Product
+public class ProductDTO
 {
-    public required IdentityUser Owner;
-    public string OwnerId{get;set;}="";
     public string Id{get;set;}="";
     public string Name{get;set;}="";
     public float StartingPrice{get;set;}
