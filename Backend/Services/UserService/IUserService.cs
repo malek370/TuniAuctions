@@ -1,11 +1,12 @@
 using System;
+using backend.Models;
 using Microsoft.AspNetCore.Identity;
 
 namespace backend.Services.UserService;
 
 public interface IUserService
 {
-        Task<IdentityUser> GetUserByIdAsync(string id);
-    Task<IdentityUser> GetUserByUsernameAsync(string username);
-    Task<IdentityUser> GetUserToken();
+    Task<AppUser> GetUserByIdAsync(string id);
+    Task<AppUser> GetUserByUsernameAsync(string username);
+    Task<AppUser> GetUserToken();
 }

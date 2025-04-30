@@ -3,6 +3,7 @@ using System.Text;
 using AutoMapper;
 using backend.DTOs;
 using backend.Helpers;
+using backend.Models;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -10,7 +11,7 @@ using Microsoft.IdentityModel.JsonWebTokens;
 using Microsoft.IdentityModel.Tokens;
 namespace backend.Services.AccountService;
 
-public class AccountService(UserManager<IdentityUser> _userManager,IMapper _mapper,IConfiguration config) : IAccountService
+public class AccountService(UserManager<AppUser> _userManager,IMapper _mapper,IConfiguration config) : IAccountService
 {
     public async Task<CustomResponse<LoginResultDTO>>  Login(LoginReqDTO loginUser)
     {
@@ -27,7 +28,7 @@ public class AccountService(UserManager<IdentityUser> _userManager,IMapper _mapp
 
         if(UserExists(registerUserDTO))return new CustomResponse<LoginResultDTO>("Username or Email already exists",409);
         if(registerUserDTO.ConfirmPassword!=registerUserDTO.Password)return new CustomResponse<LoginResultDTO>("Passwords do not match",400);
-        IdentityUser user= _mapper.Map<IdentityUser>(registerUserDTO);
+        AppUser user= _mapper.Map<AppUser>(registerUserDTO);
         var result=await _userManager.CreateAsync(user,registerUserDTO.Password);
         if(result.Succeeded)return await GenerateResWithToken(user);
         return new CustomResponse<LoginResultDTO>(
@@ -39,7 +40,7 @@ public class AccountService(UserManager<IdentityUser> _userManager,IMapper _mapp
     }
     private bool UserExists(RegisterDTO register)
     =>_userManager.Users.Any(u=>u.NormalizedUserName==register.UserName.ToUpper()||u.Email==register.Email);
-    private async Task<CustomResponse<LoginResultDTO>> GenerateResWithToken(IdentityUser user)
+    private async Task<CustomResponse<LoginResultDTO>> GenerateResWithToken(AppUser user)
     {
         var tokenKey = config["TokenKey"] ?? throw new Exception("TokenKey not found");
         var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(tokenKey));

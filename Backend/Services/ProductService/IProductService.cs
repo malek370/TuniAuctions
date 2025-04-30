@@ -6,9 +6,9 @@ namespace backend.Services.ProductService;
 
 public interface IProductService
 {
-    Task<CustomResponse<object>> CreateProduct(ProductDTO creatProd);
-    Task<CustomResponse<ProductDTO>> GetById(string prodId);
-    Task<CustomResponse<List<ProductDTO>>> GetByUser(string username);
-    Task<CustomResponse<List<ProductDTO>>> ProductsGroup();
+    Task<CustomResponse<object>> CreateProduct(CreateProductDTO creatProd);
+    Task<CustomResponse<GetProductDTO>> GetById(string prodId);
+    Task<CustomResponse<List<GetProductDTO>>> GetByUser(string username);
+    Task<CustomResponse<List<GetProductDTO>>> ProductsGroup();
     Task<CustomResponse<object>> DeleteProduct(string ProdId);
 }

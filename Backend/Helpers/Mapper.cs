@@ -10,8 +10,8 @@ public class Mapper:Profile
 {
     public Mapper()
     {
-        CreateMap<RegisterDTO,IdentityUser>();
-        CreateMap<ProductDTO,Product>();
-        CreateMap<Product,ProductDTO>();
+        CreateMap<RegisterDTO,AppUser>();
+        CreateMap<CreateProductDTO,Product>();
+        CreateMap<Product,GetProductDTO>();
     }
 }

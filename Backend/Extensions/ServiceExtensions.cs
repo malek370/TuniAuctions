@@ -3,6 +3,8 @@ using System.Text;
 using backend.DataContext;
 using backend.Models;
 using backend.Services.AccountService;
+using backend.Services.ProductService;
+using backend.Services.UserService;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -21,12 +23,14 @@ serviceColleection.AddHttpContextAccessor();
 //serviceColleection.AddControllers();
 serviceColleection.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 serviceColleection.AddScoped<IAccountService,AccountService>();
+serviceColleection.AddScoped<IUserService,UserService>();
+serviceColleection.AddScoped<IProductService,ProductService>();
 //add database
 serviceColleection.AddDbContext<AppDataContext>(opt =>
         {
             opt.UseSqlite(config.GetConnectionString("DefaultConnection"));
         });
-serviceColleection.AddIdentityCore<IdentityUser>()
+serviceColleection.AddIdentityCore<AppUser>()
     .AddRoles<IdentityRole>()
     .AddRoleManager<RoleManager<IdentityRole>>()
     .AddEntityFrameworkStores<AppDataContext>();

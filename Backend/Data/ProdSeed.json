@@ -1,0 +1,102 @@
+[
+  {
+    "Name": "Wireless Mouse",
+    "StartingPrice": 19.99,
+    "Description": "Ergonomic wireless mouse with USB receiver."
+  },
+  {
+    "Name": "Bluetooth Speaker",
+    "StartingPrice": 34.99,
+    "Description": "Portable Bluetooth speaker with deep bass."
+  },
+  {
+    "Name": "Running Shoes",
+    "StartingPrice": 59.99,
+    "Description": "Lightweight and breathable running shoes."
+  },
+  {
+    "Name": "Leather Wallet",
+    "StartingPrice": 29.99,
+    "Description": "Genuine leather wallet with multiple compartments."
+  },
+  {
+    "Name": "Gaming Keyboard",
+    "StartingPrice": 79.99,
+    "Description": "Mechanical keyboard with RGB lighting."
+  },
+  {
+    "Name": "Smart Watch",
+    "StartingPrice": 129.99,
+    "Description": "Water-resistant smartwatch with fitness tracking."
+  },
+  {
+    "Name": "Coffee Maker",
+    "StartingPrice": 49.99,
+    "Description": "Automatic drip coffee maker with timer."
+  },
+  {
+    "Name": "Backpack",
+    "StartingPrice": 39.99,
+    "Description": "Durable backpack with laptop compartment."
+  },
+  {
+    "Name": "LED Desk Lamp",
+    "StartingPrice": 22.99,
+    "Description": "Adjustable LED desk lamp with touch controls."
+  },
+  {
+    "Name": "Yoga Mat",
+    "StartingPrice": 24.99,
+    "Description": "Non-slip yoga mat with carrying strap."
+  },
+  {
+    "Name": "Electric Toothbrush",
+    "StartingPrice": 44.99,
+    "Description": "Rechargeable electric toothbrush with timer."
+  },
+  {
+    "Name": "Sunglasses",
+    "StartingPrice": 27.99,
+    "Description": "Polarized sunglasses with UV protection."
+  },
+  {
+    "Name": "Water Bottle",
+    "StartingPrice": 17.49,
+    "Description": "Stainless steel insulated water bottle."
+  },
+  {
+    "Name": "HD Webcam",
+    "StartingPrice": 59.99,
+    "Description": "1080p HD webcam with built-in microphone."
+  },
+  {
+    "Name": "Portable Charger",
+    "StartingPrice": 29.95,
+    "Description": "10,000mAh power bank with USB-C output."
+  },
+  {
+    "Name": "Office Chair",
+    "StartingPrice": 149.99,
+    "Description": "Ergonomic office chair with lumbar support."
+  },
+  {
+    "Name": "Wireless Earbuds",
+    "StartingPrice": 89.99,
+    "Description": "Noise-canceling wireless earbuds with charging case."
+  },
+  {
+    "Name": "Laptop Stand",
+    "StartingPrice": 32.99,
+    "Description": "Adjustable aluminum laptop stand."
+  },
+  {
+    "Name": "Table Lamp",
+    "StartingPrice": 37.5,
+    "Description": "Modern table lamp with fabric shade."
+  },
+  {
+    "Name": "Fitness Tracker",
+    "StartingPrice": 69.99,
+    "Description": "Activity tracker with heart rate monitor."
+  }
+]
